@@ -14,6 +14,7 @@ class ProjectSerializer
       repo_url: project.repo_url,
       live_preview_url: project.live_preview_url,
       user_name: project.user.username,
+      user_id: project.user.id,
     }
   end
 

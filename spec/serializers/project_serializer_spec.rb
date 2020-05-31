@@ -12,7 +12,7 @@ RSpec.describe ProjectSerializer do
       user: user
     )
   end
-  let(:user) { instance_double(User, username: "A USERNAME") }
+  let(:user) { instance_double(User, id: 123, username: "A USERNAME") }
 
   describe '#as_json' do
     let(:serialized_project) do
@@ -21,6 +21,7 @@ RSpec.describe ProjectSerializer do
         repo_url: 'www.repourl.com/path',
         live_preview_url: 'www.livepreviewurl.com/path',
         user_name: "A USERNAME",
+        user_id: 123,
       }
     end
 
